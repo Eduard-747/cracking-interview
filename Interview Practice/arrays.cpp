@@ -4,7 +4,7 @@
 #include<set>
 class arrays {
 public:
-    int solution(std::vector<int> a) {
+    static int solution(std::vector<int> a) {
         std::vector<int> indvec;
         std::set<int> s ;
         bool flag {false} ;
@@ -20,7 +20,7 @@ public:
         return flag ? a[*std::min_element(indvec.begin(),indvec.end())] : -1 ;
     }
 
-    std::vector<std::vector<int>> solution(std::vector<std::vector<int>> a) {
+    static std::vector<std::vector<int>> solution(std::vector<std::vector<int>> a) {
         std::vector<std::vector<int>> tmp(a.size());
         for(int i = 0; i < a.size(); ++i) {
             tmp[i].resize(a.size()) ;
@@ -33,7 +33,7 @@ public:
         return tmp ;
     }
 
-    bool solution(std::vector<std::string> crypt, std::vector<std::vector<char>> solution) {
+    static bool solution(std::vector<std::string> crypt, std::vector<std::vector<char>> solution) {
 
         bool flag = true ;   
         for(int i = 0 ; i < crypt.size() ; ++i)
@@ -84,7 +84,7 @@ public:
         return ((numberA + numberB) == numberC) && flag ? true : false ;    
     }
 
-    char solution(std::string s) {
+    static char solution(std::string s) {
         for(int i = 0; i < s.size(); i++){
             char c = s[i] ;
             s[i] = '0' ;
@@ -95,7 +95,7 @@ public:
         return  '_' ;
     }
 
-    bool check(std::string &str)
+    static bool check(std::string &str)
     {
         str.erase(std::remove(str.begin(),str.end(),'.'),str.end()) ;
         for(int i = 0; i < str.size(); i++){
@@ -108,7 +108,7 @@ public:
         return true ;
     }
 
-    bool solution(std::vector<std::vector<char>> grid) {
+    static bool solution(std::vector<std::vector<char>> grid) {
         std::string str ;
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
